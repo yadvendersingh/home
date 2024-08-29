@@ -114,26 +114,70 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Product Specialist - Technical (Software Developer)</h3>
-              <div class="subheading mb-3">Cognizant Technology Solutions</div>
-                <p>
-                  <ul>
-                    <li>Drove seamless delivery of app enhancements, transitioning efficiently across development, testing, and CI/CD deployment, accelerated feature integration and delivery of Java enterprise solutions, reducing development cycle time by 20%</li>
-                    <li>Conducted knowledge transfer sessions for new features and peer code reviews, facilitating informed decision-making for the team and stakeholders, leading to a 30% decrease in development overhead time</li>
-                    <li>Refactored microservices, applied design patterns and introduced multi-threading for optimized concurrency and response time which led to a 75% reduction in effort for adding new functionality while minimizing costs</li>
-                    <li>Engineered a dashboard application using Spring microservices and Angular which automated the batch monitoring and report generation thus reducing server downtime by 95%</li>
-                    <li>Applied Agile methodologies, actively participated in daily scrum calls and retrospection meetings, and utilized tools such as JIRA and Rally for sprint planning and project execution</li>
-                    <li>Investigated and improved database performance using data patch scripts, resolving database inconsistencies in over 100,000 records and enhancing overall system stability</li>
-                    <li>Performed root cause analysis, prepared data fix and bug fixes and collaborated seamlessly with DevOps team to deploy them in production, and reduced resolution time by 40%</li>
-                    <li>Designed microservices interfacing with MVR system through RESTful APIs and Kafka messaging, enhancing vehicle history transparency, resulting in a 50% improvement in policy rating</li>
-                    <li>Created a notification application to send reminders about upcoming compliance test and certification, boosting timely completions by 40%, elevating overall compliance rate</li>
-                  </ul>
+                <h3 class="mb-0">Product Specialist - Technical (Software Developer)</h3>
+                <div class="subheading mb-3">Cognizant Technology Solutions</div>
+                <p style="margin-bottom: 0;">
+                    <!-- Visible by default -->
+                    <ul style="margin-bottom: 0; padding-left: 20px;"> <!-- Removed default margin to make it seamless -->
+                        <li>Drove seamless delivery of app enhancements, transitioning efficiently across development, testing, and CI/CD deployment, accelerated feature integration and delivery of Java enterprise solutions, reducing development cycle time by 20%</li>
+                        <li>Conducted knowledge transfer sessions for new features and peer code reviews, facilitating informed decision-making for the team and stakeholders, leading to a 30% decrease in development overhead time</li>
+                        <li>Refactored microservices, applied design patterns and introduced multi-threading for optimized concurrency and response time which led to a 75% reduction in effort for adding new functionality while minimizing costs</li>
+                        <li>Engineered a dashboard application using Spring microservices and Angular which automated the batch monitoring and report generation thus reducing server downtime by 95%</li>
+                    </ul>
+                    <!-- Hidden by default -->
+                    <ul id="detailsList" class="hidden-details">
+                        <li>Applied Agile methodologies, actively participated in daily scrum calls and retrospection meetings, and utilized tools such as JIRA and Rally for sprint planning and project execution</li>
+                        <li>Investigated and improved database performance using data patch scripts, resolving database inconsistencies in over 100,000 records and enhancing overall system stability</li>
+                        <li>Performed root cause analysis, prepared data fix and bug fixes and collaborated seamlessly with DevOps team to deploy them in production, and reduced resolution time by 40%</li>
+                        <li>Designed microservices interfacing with MVR system through RESTful APIs and Kafka messaging, enhancing vehicle history transparency, resulting in a 50% improvement in policy rating</li>
+                        <li>Created a notification application to send reminders about upcoming compliance test and certification, boosting timely completions by 40%, elevating overall compliance rate</li>
+                    </ul>
                 </p>
-              </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Sep 2017 - Jul 2022</span>
+                <a href="javascript:void(0);" id="readMoreLink" onclick="toggleDetails()">Read more</a>
             </div>
-          </div>
+            <div class="resume-date text-md-right">
+                <span class="text-primary">Sep 2017 - Jul 2022</span>
+            </div>
+        </div>
+        
+        <style>
+            /* Styling for smooth transition */
+            .hidden-details {
+                max-height: 0; /* Start with hidden */
+                overflow: hidden; /* Hide the content */
+                transition: max-height 0.5s ease-out; /* Smooth transition */
+                margin-bottom: 0; /* Make it seamless */
+                padding-left: 20px; /* Align with the first list */
+            }
+            
+            .visible {
+                max-height: 500px; /* Arbitrary height that will show the entire content */
+                transition: max-height 0.5s ease-in; /* Smooth transition */
+            }
+        
+            /* Remove spacing between the two ul lists */
+            ul {
+                margin: 0; /* Remove default margin */
+                padding-left: 20px; /* Maintain proper indentation */
+            }
+        </style>
+        
+        <script>
+            function toggleDetails() {
+                var detailsList = document.getElementById("detailsList");
+                var readMoreLink = document.getElementById("readMoreLink");
+        
+                if (detailsList.classList.contains("visible")) {
+                    detailsList.classList.remove("visible");  // Collapse the list
+                    readMoreLink.textContent = "Read more";  // Change link text back to "Read more"
+                } else {
+                    detailsList.classList.add("visible");  // Expand the list
+                    readMoreLink.textContent = "Read less";  // Change link text to "Read less"
+                }
+            }
+        </script>
+        
+        
 
 <!--           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
